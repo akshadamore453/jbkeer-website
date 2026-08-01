@@ -36,7 +36,7 @@ function Landing() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/category/:slug" element={<CategoryPage />} />
