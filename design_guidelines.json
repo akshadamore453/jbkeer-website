@@ -1,0 +1,94 @@
+{
+  "project_name": "J B KEER Adhesive Consultant Landing Page",
+  "theme": "light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) adapted for Corporate Industrial B2B",
+  "design_philosophy": "Corporate Indian B2B trust combined with modern clarity. High white space, strong typography, restrained color palette anchored by brand deep navy and teal. Clean grid layouts reflecting engineering precision and 40 years of legacy. Avoids startup/SaaS tropes; focuses on industrial legacy and credibility.",
+  "colors": {
+    "brand_navy": "#1A172B",
+    "brand_teal": "#0E9F98",
+    "background_primary": "#FFFFFF",
+    "background_secondary": "#F4F5F7",
+    "text_primary": "#0D0B14",
+    "text_secondary": "#4B4A54",
+    "border": "#E5E7EB",
+    "cta_background": "#0E9F98",
+    "cta_text": "#FFFFFF",
+    "cta_hover": "#0B827C"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Outfit, sans-serif",
+      "weights": ["400", "700"],
+      "h1": "text-5xl md:text-6xl tracking-tight leading-none text-brand_navy",
+      "h2": "text-3xl md:text-4xl tracking-tight leading-tight text-brand_navy",
+      "h3": "text-xl md:text-2xl font-bold text-brand_navy"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["400", "500", "600"],
+      "base": "text-base md:text-lg text-text_secondary leading-relaxed"
+    },
+    "labels": "text-sm uppercase tracking-[0.2em] font-semibold text-brand_teal"
+  },
+  "layout_and_spacing": {
+    "section_padding": "py-20 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8",
+    "card_padding": "p-8 md:p-10"
+  },
+  "surfaces_and_borders": {
+    "cards": "bg-white border border-gray-200 rounded-none shadow-sm hover:shadow-lg transition-all duration-300",
+    "glass_header": "bg-white/90 backdrop-blur-md border-b border-gray-100",
+    "dark_sections": "bg-[#1A172B] text-white"
+  },
+  "motion_and_interactions": {
+    "hover_state": "hover:-translate-y-1 hover:border-brand_teal transition-all duration-300",
+    "button_hover": "hover:bg-[#0B827C] hover:shadow-md transition-colors",
+    "fade_in": "animate-fade-in-up"
+  },
+  "components_instructions": {
+    "navigation": "Sticky top navigation (z-50) using glassmorphism. Left: Logo. Center: Links (Services, Industries, About, Process). Right: 'Book Consultancy' button with data-testid='nav-book-consultancy'.",
+    "hero": "Split layout or full width with heavy gradient overlay to ensure text contrast. Use 'hero_industrial' image in background. H1: '40 Years of Excellence in Industrial Adhesives'. Sub: 'Born to Bond. Precision adhesives, construction chemicals, and expert consultancy for B2B enterprises.' Primary CTA: 'Book Consultancy' with data-testid='hero-book-consultancy'.",
+    "stats_bar": "Dense, Control Room style grid. Dark background (#1A172B). 40+ Years Experience, 1200+ Projects Delivered. High contrast white and teal text.",
+    "services_grid": "Bento grid layout. Use generated macro photography for cards. Include: Industrial Adhesives, Construction Chemicals, Waterproofing, Sealants, Wood Bonding, Expert Consultancy. Cards should have solid backgrounds, sharp edges, and clear typographic hierarchy.",
+    "industries_served": "Horizontal scrolling or tight grid. Minimal icons or text-heavy list with borders. Furniture, Construction, Packaging, Automotive, Footwear, Textile.",
+    "process": "Step-by-step numbered list layout. Focus on the consultancy aspect (Audit -> Formulation -> Application -> Support). Use 1px borders and large typography numbers.",
+    "contact_form": "Shadcn UI Form at the bottom. Fields: Name, Email, Phone, Company, Project Type (Select), Message. Button: Full width brand_teal with data-testid='contact-form-submit'.",
+    "footer": "Dark background. Include contact details: Phone (+91 9850858558), Website (www.jbkeer.com), Address (Pune). Quick links. 'Born to Bond' tagline."
+  },
+  "media_assets": {
+    "logo": {
+      "url": "https://customer-assets.emergentagent.com/job_3371ed49-747a-4197-b709-e33a6f3bbb38/artifacts/hh2zrvlw_69e5cfc0d67e3_download.jpg",
+      "description": "J B KEER Company Logo"
+    },
+    "hero_image": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/3371ed49-747a-4197-b709-e33a6f3bbb38/images/2bb28a2c7fe2087bb3a877f83f00045e8364a5f9566e8175c2f6d43959fcd11d.png",
+      "description": "Modern industrial corporate architecture"
+    },
+    "services": [
+      {
+        "name": "Industrial Adhesives",
+        "url": "https://static.prod-images.emergentagent.com/jobs/3371ed49-747a-4197-b709-e33a6f3bbb38/images/b87a4098d728914130ad91aad78b013824f99cac1e7c5efe0986f7e88be190fa.png"
+      },
+      {
+        "name": "Construction Chemicals",
+        "url": "https://static.prod-images.emergentagent.com/jobs/3371ed49-747a-4197-b709-e33a6f3bbb38/images/a79ad8ce3fda7a74576670ac1a7874f380abb66ad6fefb766e6f5b89ff8232d9.png"
+      },
+      {
+        "name": "Wood Bonding",
+        "url": "https://static.prod-images.emergentagent.com/jobs/3371ed49-747a-4197-b709-e33a6f3bbb38/images/c74cd9030df43d144cbaa003f71a214be14c9e8468fdb42b9098ed13f25a1de5.png"
+      },
+      {
+        "name": "Expert Consultancy",
+        "url": "https://static.prod-images.emergentagent.com/jobs/3371ed49-747a-4197-b709-e33a6f3bbb38/images/f36e36067a78c5df35ee0655918b39e764d0f3172cfeb4c83215f284dcd71f93.png"
+      }
+    ],
+    "trust_background": {
+      "url": "https://images.unsplash.com/photo-1758518730384-be3d205838e8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBoYW5kc2hha2V8ZW58MHx8fHwxNzc5Mjc1ODE0fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Corporate handshake for Why Choose Us section"
+    }
+  },
+  "testing_requirements": {
+    "attributes": "All interactive elements must use data-testid attributes (e.g., data-testid='nav-book-consultancy', data-testid='contact-form-submit', data-testid='service-card-*')"
+  }
+}

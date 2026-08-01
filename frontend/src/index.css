@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --brand-navy: #1A172B;
+    --brand-navy-2: #221E3A;
+    --brand-teal: #0E9F98;
+    --brand-teal-dark: #0B827C;
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F4F5F7;
+    --text-primary: #0D0B14;
+    --text-secondary: #4B4A54;
+    --border-soft: #E5E7EB;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 252 23% 6%;
+        --card: 0 0% 100%;
+        --card-foreground: 252 23% 6%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 252 23% 6%;
+        --primary: 251 27% 13%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 220 14% 96%;
+        --secondary-foreground: 251 27% 13%;
+        --muted: 220 14% 96%;
+        --muted-foreground: 240 4% 31%;
+        --accent: 177 84% 34%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 220 13% 91%;
+        --input: 220 13% 91%;
+        --ring: 177 84% 34%;
+        --radius: 0.25rem;
+    }
+}
+
+@layer base {
+    * { @apply border-border; }
+    html { scroll-behavior: smooth; }
+    body {
+        margin: 0;
+        font-family: 'Manrope', system-ui, sans-serif;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Outfit', sans-serif;
+        letter-spacing: -0.015em;
+        color: var(--brand-navy);
+    }
+    ::selection { background: var(--brand-teal); color: white; }
+}
+
+@layer utilities {
+    .font-display { font-family: 'Outfit', sans-serif; }
+    .font-body { font-family: 'Manrope', sans-serif; }
+    .text-brand-navy { color: var(--brand-navy); }
+    .text-brand-teal { color: var(--brand-teal); }
+    .bg-brand-navy { background-color: var(--brand-navy); }
+    .bg-brand-navy-2 { background-color: var(--brand-navy-2); }
+    .bg-brand-teal { background-color: var(--brand-teal); }
+    .border-brand-teal { border-color: var(--brand-teal); }
+    .border-brand-navy { border-color: var(--brand-navy); }
+    .hover\:bg-brand-teal-dark:hover { background-color: var(--brand-teal-dark); }
+
+    .container-x { max-width: 1280px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+    @media (min-width: 768px) { .container-x { padding-left: 3rem; padding-right: 3rem; } }
+
+    .label-eyebrow {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--brand-teal);
+    }
+
+    .grain {
+        background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+        background-size: 3px 3px;
+    }
+}
+
+@keyframes fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+@keyframes ticker-stripe {
+    from { background-position: 0 0; }
+    to { background-position: 60px 0; }
+}
+.diagonal-stripes {
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(14, 159, 152, 0.15) 0px,
+        rgba(14, 159, 152, 0.15) 2px,
+        transparent 2px,
+        transparent 12px
+    );
+}
