@@ -9,7 +9,9 @@ import { Label } from "../ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
 import { SITE, PROJECT_TYPES } from "../../lib/site";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const BACKEND_URL = (process.env.REACT_APP_BACKEND_URL || "").replace(/\/$/, "");
+const API = `${BACKEND_URL}/api`;
+
 
 const initial = { name: "", email: "", phone: "", company: "", project_type: "", message: "" };
 
