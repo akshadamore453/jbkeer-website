@@ -16,9 +16,16 @@ load_dotenv(ROOT_DIR / '.env')
 
 # MongoDB connection with safe defaults for deployment
 mongo_url = os.environ.get('MONGO_URL', 'mongodb://localhost:27017')
-client = AsyncIOMotorClient(mongo_url)
 db_name = os.environ.get('DB_NAME', 'jbkeer_db')
-db = client[db_name]
+
+try:
+    client = AsyncIOMotorClient(mongo_url)
+    db = client[db_name]
+except Exception as err:
+    logging.error(f"MongoDB connection error: {err}")
+    client = AsyncIOMotorClient('mongodb://localhost:27017')
+    db = client[db_name]
+
 
 
 # Create the main app without a prefix
@@ -62,9 +69,15 @@ class Lead(BaseModel):
 
 
 # ------------ Routes ------------
+@app.get("/")
+async def app_root():
+    return {"message": "J B KEER Adhesive Consultant API", "tagline": "Born to Bond", "status": "online"}
+
+
 @api_router.get("/")
 async def root():
     return {"message": "J B KEER Adhesive Consultant API", "tagline": "Born to Bond"}
+
 
 
 @api_router.post("/status", response_model=StatusCheck)
@@ -94,7 +107,8 @@ async def create_lead(payload: LeadCreate):
         await db.leads.insert_one(doc)
     except Exception as e:
         logging.exception("Failed to insert lead")
-        raise HTTPException(status_code=500, detail="Could not save lead") from e
+        raise HTTPException(status_code=500, detail=f"Could not save lead: {str(e)}") from e
+
     return lead
 
 
